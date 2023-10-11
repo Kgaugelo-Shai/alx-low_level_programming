@@ -1,20 +1,18 @@
 #include "main.h"
-
 /**
- * prints_alphabet - prints the alphabet in ascending order
- * 
+ * print_alphabet - prints the alphabet in lowercase
+ * does not take any arguments
  * Return: void
  */
-
 void print_alphabet(void)
 {
 	char c = 'a';
-	
+
 	while (c <= 'z')
 	{
 		_putchar(c);
 		c++;
 	}
 
-	_putchar('\n');
+	_putchar('\n);
 }
