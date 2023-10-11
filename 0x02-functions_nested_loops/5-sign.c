@@ -6,10 +6,8 @@
  *
  * Return: 1 is positive, 0 is zero. -1 is negative.
  */
-int print_sign(int n) 
+int print_sign(int n)
 {
-	char sign;
-
 	if (n >= 1)
 	{
 		_putchar('+');
