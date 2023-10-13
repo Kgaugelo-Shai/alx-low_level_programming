@@ -9,23 +9,19 @@ void more_numbers(void)
 {
 	int c = 0;
 	int count = 0;
+	int num;
 
 	while (count < 10)
 	{
 		while (c <= 14)
 		{
-			if (c < 10)
+			num = c;
+			if (c > 9)
 			{
-				_putchar(c + '0');
+				_putchar(1 + '0');
+				num = c % 10;
 			}
-			else if ((c >= 10) && (c <= 99))
-			{
-				int doubles = c / 10;
-				int singles = c % 10;
-
-				_putchar(doubles + '0');
-				_putchar(singles + '0');
-			}
+			_putchar(num + '0');
 			c++;
 		}
 		c = 0;
@@ -33,4 +29,3 @@ void more_numbers(void)
 		count++;
 	}
 }
-
