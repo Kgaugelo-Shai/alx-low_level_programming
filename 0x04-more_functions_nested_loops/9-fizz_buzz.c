@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
  * main - initiates Fixx-Buzz test
@@ -31,6 +30,7 @@ int main(void)
 		count++;
 	}
 	printf("\n");
+
 	return (0);
 }
 
