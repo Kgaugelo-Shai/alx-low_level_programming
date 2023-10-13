@@ -17,7 +17,6 @@ void more_numbers(void)
 			if (c < 10)
 			{
 				_putchar(c + '0');
-				c++;
 			}
 			else if ((c >= 10) && (c <= 99))
 			{
@@ -27,7 +26,9 @@ void more_numbers(void)
 				_putchar(doubles + '0');
 				_putchar(singles + '0');
 			}
+			c++;
 		}
+		c = 0;
 		_putchar('\n');
 		count++;
 	}
