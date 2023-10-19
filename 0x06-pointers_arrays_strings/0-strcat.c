@@ -9,19 +9,25 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int count = 0;
+	int count1 = 0;
+	int count2 = 0;
 	int i;
 
 	for (i = 0; dest[i] != '\0'; i++)
 	{
+		count1++;
+	}
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		count2++;
+	}
+
+	for (i = 0; i <= count2; i++)
+	{
+		dest[count1] = src[i];
 		count++;
 	}
 
-	for (i = 0; src[i] != '\0'; i++)
-	{
-		dest[count - 1] = src[i];
-		count++;
-	}
-	dest[count] = '\n';
 	return (dest);
 }
