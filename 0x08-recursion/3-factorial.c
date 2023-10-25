@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * facttorial - returns the factorial of a given number
+ * factorial - returns the factorial of a given number
  * @n: the number to be factored
  *
  * Return: -1 if n is lower than 0. n otherwise
