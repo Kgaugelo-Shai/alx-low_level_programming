@@ -19,5 +19,6 @@ typedef struct dog dog_t;
 dog_t *new_dog(char *name, float age, char *owner);
 int len_str(char *str);
 char *cpy_str(char *cpy_str, char *or_str);
+void free_dog(dog_t *d);
 
 #endif
