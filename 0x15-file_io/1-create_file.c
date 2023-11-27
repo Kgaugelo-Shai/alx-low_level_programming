@@ -22,12 +22,11 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 
 	if (!text_context)
-		text_content = "";
-
-	while (text_content[len])
+	{
+		while (text_content[len])
 		len++;
-
-	char_wr = write(file_dp, text_content, len);
+		char_wr = write(file_dp, text_content, len);
+	}
 	if (char_wr == -1)
 	{
 		close(file_dp);
