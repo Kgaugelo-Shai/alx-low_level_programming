@@ -12,6 +12,7 @@ int create_file(const char *filename, char *text_content)
 {
 	int file_dp;
 	int char_wr;
+	int len = 0;
 
 	if (filename == NULL)
 		return (-1);
@@ -20,11 +21,13 @@ int create_file(const char *filename, char *text_content)
 	if (file_dp == -1)
 		return (-1);
 
-	if (text_content != NULL)
-	{
+	if (!text_context)
 		text_content = "";
-	}
-	char_wr = write(file_dp, text_content, strlen(text_content));
+
+	while (text_content[len])
+		len++;
+
+	char_wr = write(file_dp, text_content, len);
 	if (char_wr == -1)
 	{
 		close(file_dp);
