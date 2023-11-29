@@ -9,8 +9,8 @@
  */
 int main(int argc, char **argv)
 {
-	int fd_to, fd_from, bytes_read, close_err;
-	ssize_t bytes_wr;
+	int fd_to, fd_from, close_err;
+	ssize_t bytes_wr, bytes_read;
 	char buffer[BUFF];
 
 	if (argc != 3 || argv == NULL)
