@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 	long int bytes_wr;
 	char buffer[BUFF];
 
-	if (argc != 3)
+	if (argc != 3 || argv == NULL)
 	{
 		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 		exit(97);
