@@ -38,23 +38,27 @@ int main(int argc, char **argv)
 		bytes_read = read(fd_from, buffer, BUFF);
 		if (bytes_read == -1)
 		{
+			close(fd_from);
+			close(fd_to);
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
 		bytes_wr = write(fd_to, buffer, bytes_read);
 		if (bytes_wr == -1)
 		{
+			close(fd_from);
+			close(fd_to);
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]);
 			exit(99);
 		}
 	}
-	close_err = close(fd_from) == -1;
+	close_err = close(fd_from);
 	if (close_err == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
 		exit(100);
 	}
-	close_err = close(fd_to) == -1;
+	close_err = close(fd_to);
 	if (close_err == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to);
