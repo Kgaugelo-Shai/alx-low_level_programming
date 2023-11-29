@@ -9,7 +9,7 @@
  */
 int main(int argc, char **argv)
 {
-	int fd_to, fd_from, bytes_read;
+	int fd_to, fd_from, bytes_read, close_err;
 	long int bytes_wr;
 	char buffer[BUFF];
 
@@ -48,13 +48,14 @@ int main(int argc, char **argv)
 			exit(99);
 		}
 	}
-
-	if (close(fd_from) == -1)
+	close_err = close(fd_from) == -1;
+	if (close_err == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
 		exit(100);
 	}
-	if (close(fd_to) == -1)
+	close_err = close(fd_to) == -1;
+	if (close_err == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to);
 		exit(100);
