@@ -10,7 +10,7 @@
 int main(int argc, char **argv)
 {
 	int fd_to, fd_from, bytes_read, close_err;
-	long int bytes_wr;
+	ssize_t bytes_wr;
 	char buffer[BUFF];
 
 	if (argc != 3 || argv == NULL)
