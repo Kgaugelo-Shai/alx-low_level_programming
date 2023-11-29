@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 	}
 
 	bytes_read = BUFF;
-	while (bytes_read == 1024)
+	while (bytes_read == BUFF)
 	{
 		bytes_read = read(fd_from, buffer, BUFF);
 		if (bytes_read == -1)
@@ -48,7 +48,7 @@ int main(int argc, char **argv)
 		{
 			close(fd_from);
 			close(fd_to);
-			dprintf(STDERR_FILENO, "Error: Can't write file %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 			exit(99);
 		}
 	}
