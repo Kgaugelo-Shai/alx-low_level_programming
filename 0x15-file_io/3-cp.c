@@ -45,7 +45,7 @@ int main(int argc, char **argv)
 	check_error(fd_from, fd_to, argv);
 
 	bytes_read = BUFF;
-	while (bytes_read == BUFF)
+	while (bytes_read <= BUFF)
 	{
 		bytes_read = read(fd_from, buffer, BUFF);
 		if (bytes_read == -1)
