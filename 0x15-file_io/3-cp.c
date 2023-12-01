@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 	ssize_t bytes_wr, bytes_read;
 	char buffer[BUFF];
 
-	if (argc != 3 || argv == NULL)
+	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 		exit(97);
@@ -45,7 +45,7 @@ int main(int argc, char **argv)
 	check_error(fd_from, fd_to, argv);
 
 	bytes_read = BUFF;
-	while (bytes_read <= BUFF)
+	while (bytes_read == BUFF)
 	{
 		bytes_read = read(fd_from, buffer, BUFF);
 		if (bytes_read == -1)
