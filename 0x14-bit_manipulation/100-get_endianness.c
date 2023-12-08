@@ -1,6 +1,3 @@
-100-get_endianness.c
-
-
 #include "main.h"
 
 /**
