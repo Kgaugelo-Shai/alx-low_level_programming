@@ -13,7 +13,7 @@ unsigned long int _pow_finder(unsigned int base, unsigned int exponent)
 	unsigned int idx;
 
 	answer = 1;
-	for (idx = 1; idx <= power; idx++)
+	for (idx = 1; idx <= exponent; idx++)
 		answer *= base;
 	return (answer);
 }
