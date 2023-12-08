@@ -7,7 +7,7 @@
  *
  * Return: value of base to the power of the exponent
  */
-unsigned long int _pow_finder(unsigned int base, unsigned int power)
+unsigned long int _pow_finder(unsigned int base, unsigned int exponent)
 {
 	unsigned long int answer;
 	unsigned int idx;
@@ -31,7 +31,7 @@ void print_binary(unsigned long int n)
 	char sgnl;
 
 	sgnl = 0;
-	dvsr = _pow_finder(2,sizeof(unsigned long int)* 8 - 1);
+	dvsr = _pow_finder(2, sizeof(unsigned long int) * 8 - 1);
 	while (dvsr != 0)
 	{
 		msk = n & dvsr;
