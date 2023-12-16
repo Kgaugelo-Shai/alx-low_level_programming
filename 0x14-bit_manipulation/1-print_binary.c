@@ -43,6 +43,6 @@ void print_binary(unsigned long int n)
 		else if (sgnl == 1 || dvsr == 1)
 			_putchar('0');
 		dvsr >>= 1;
-	
+	}	
 }
 
