@@ -4,7 +4,7 @@
  * add_dnodeint - adds node at the beginning
  * of dlistint_t list
  *
- * @head: head 
+ * @head: head
  * @n: value
  * Return: the address of the new element
  */
